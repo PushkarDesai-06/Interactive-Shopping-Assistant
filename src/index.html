@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Shopping Assistant</title>
+    <link rel="stylesheet" href="./output.css" />
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+  </head>
+  <body style="background-color: #0a192f">
+    <!-- Header and navbar -->
+    <header
+      class="flex justify-between bg-back border-x-0 border-b-2 border-main mb-8"
+    >
+      <h1 class="text-xl text-center p-3 text-white">
+        <img
+          src="../Assets/Images/shop-bag.png"
+          alt=""
+          class="h-[35px] select-none"
+          draggable="false"
+        />
+      </h1>
+      <div class="flex items-center gap-8 mx-8">
+        <a href="#" class="text-white text-lg hover:underline cursor-pointer">
+          Saved Products
+        </a>
+        <a href="#" class="text-white text-lg hover:underline cursor-pointer"
+          >Home</a
+        >
+      </div>
+    </header>
+
+    <main class="text-white z-0">
+      <!-- Search Bar -->
+      <div
+        class="flex justify-center items-center mx-auto px-4 gap-4 text-main"
+      >
+        <input
+          type="text"
+          id="search-bar"
+          autocomplete="off"
+          placeholder="Search for products..."
+          class="h-10 px-6 w-72 text-white rounded-full bg-back border focus:border-0 focus:bg-white focus:text-black transition"
+        />
+        <button
+          id="search-btn"
+          class="border border-main h-10 p-1 px-4 rounded-full transition hover:bg-white active:scale-95 hover:text-black hover:border-white"
+        >
+          Search
+        </button>
+      </div>
+      <!-- -------- -->
+      <section id="product-list">
+        <h2>Product Results</h2>
+        <ul id="products"></ul>
+      </section>
+
+      <section id="comparison-table">
+        <h2 class="text-white">Comparison Table</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Price</th>
+              <th>Rating</th>
+              <th>Store</th>
+            </tr>
+          </thead>
+          <tbody id="comparison-body"></tbody>
+        </table>
+      </section>
+
+      <button class="btn btn-primary">This is a button</button>
+    </main>
+
+    <!-- Import CDNs and Scripts -->
+
+    <!-- Axios CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <!-- FontAwesome CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"></script>
+
+    <!-- FlyonUi script File -->
+    <script src="../node_modules/flyonui/flyonui.js"></script>
+
+    <!-- End of Import CDNs -->
+
+    <script src="script.js"></script>
+  </body>
+</html>
